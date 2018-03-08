@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import { HashRouter, Route, Link, Switch } from 'react-router-dom';
 import { Router } from 'react-router';
 import reduxThunk from 'redux-thunk';
 import promise from 'redux-promise';
@@ -28,7 +28,7 @@ const store = createStoreWithMiddleWare(reducers);
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <HashRouter>
       <Router history={history}>
           <Switch>
             <Route exact path='/' component={Portfolio} />
@@ -43,7 +43,7 @@ ReactDOM.render(
 
           </Switch>
       </Router>
-    </BrowserRouter>
+    </HashRouter>
   </Provider>
   , document.getElementById('root'));
 registerServiceWorker();
