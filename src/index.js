@@ -31,14 +31,14 @@ ReactDOM.render(
     <HashRouter>
       <Router history={history}>
           <Switch>
-            <Route exact path='/' component={Portfolio} />
-            <Route path='/taskapp/add-task' component={NewPost} />
-            <Route path='/taskapp/display-tasks' component={DisplayTasks} />
-            <Route path='/taskapp/display-task/:id' component={PostShow} />
-            <Route path='/taskapp/signin' component={Signin} />
-            <Route path='/taskapp/signup' component={Signup} />
-            <Route path='/taskapp/signout' component={Signout} />
-            <Route path='/taskapp' component={TaskAgenda} />
+            <Route exact path={process.env.PUBLIC_URL + '/'} component={Portfolio} />
+            <Route path={process.env.PUBLIC_URL + '/taskapp/add-task'} component={NewPost} />
+            <Route path={process.env.PUBLIC_URL + '/taskapp/display-tasks'} component={DisplayTasks} />
+            <Route path={process.env.PUBLIC_URL + '/taskapp/display-task/:id'} component={PostShow} />
+            <Route path={process.env.PUBLIC_URL + '/taskapp/signin'} component={Signin} />
+            <Route path={process.env.PUBLIC_URL + '/taskapp/signup'} component={Signup} />
+            <Route path={process.env.PUBLIC_URL + '/taskapp/signout'} component={Signout} />
+            <Route path={process.env.PUBLIC_URL + '/taskapp'} component={TaskAgenda} />
 
 
           </Switch>
